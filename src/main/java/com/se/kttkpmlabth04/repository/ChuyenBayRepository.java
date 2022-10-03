@@ -9,4 +9,10 @@ import java.util.List;
 @Repository
 public interface ChuyenBayRepository extends JpaRepository<ChuyenBay, String> {
     List<ChuyenBay> getChuyenBaysByGadi(String gadi);
+    
+    List<ChuyenBay> getChuyenBaysByDodaiLessThanAndDodaiGreaterThan(int less,int than);
+    
+    List<ChuyenBay> getChuyenBaysByGadiAndGaden(String gaDi,String gaDen);
+    
+    Integer countChuyenBayByGadi(String gaDi);
 }
